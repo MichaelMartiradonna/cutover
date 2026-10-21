@@ -1,0 +1,9 @@
+unit,name,move_in_date,status
+101,Avery Example,2020-01-15,active
+,Blair Example,2020-01-15,notice
+103,,2020-01-15,vacant
+104,Casey Example,2020-02-30,active
+105,Drew Example,2099-01-01,active
+106,Ellis Example,2020-01-15,pending
+107,Finley Example,2020-01-15,notice
+107,Finley Example,2020-01-15,notice

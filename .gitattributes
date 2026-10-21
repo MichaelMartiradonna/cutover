@@ -1,0 +1,3 @@
+# Checksums in the README and the sidecars depend on exact bytes; never convert line endings on checkout.
+*.csv -text
+*.sha256 -text

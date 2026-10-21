@@ -1,0 +1,14 @@
+# Cutover mapping: fictional legacy PLM parts list -> cloud parts table.
+# Rename and reorder only. `unit` is the legacy unit of measure; it is not
+# used by the cloud table, so it is dropped explicitly (never silently).
+source_header: [part_number, revision, description, unit, status, created_on]
+target_header: [item_id, rev, item_name, lifecycle_state, created_date, source_system]
+columns:
+  - {from: part_number, to: item_id}
+  - {from: revision, to: rev}
+  - {from: description, to: item_name}
+  - {from: status, to: lifecycle_state}
+  - {from: created_on, to: created_date}
+constants:
+  - {to: source_system, value: "legacy-plm"}
+drop: [unit]

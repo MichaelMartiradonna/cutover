@@ -1,0 +1,11 @@
+# Cutover mapping: fictional AppFolio-style tenant export -> import layout for another PM system.
+# Rename and reorder only. No transforms, no expressions, no filled values.
+source_header: [unit, name, move_in_date, status]
+target_header: [Tenant Name, Unit Number, Lease Status, Move In, Source System]
+columns:
+  - {from: name, to: Tenant Name}
+  - {from: unit, to: Unit Number}
+  - {from: status, to: Lease Status}
+  - {from: move_in_date, to: Move In}
+constants:
+  - {to: Source System, value: "appfolio-export"}

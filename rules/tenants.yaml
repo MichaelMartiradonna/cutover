@@ -1,0 +1,15 @@
+# Cutover rules: fictional tenant export (AppFolio-style columns).
+# These are the original five checks, written as configuration.
+# Rule IDs are fixed by the validator: R001 required, D001/D002 date,
+# E001 enum, U001 unique, F001-F003 file format, C001 checksum, I001 I/O.
+header: [unit, name, move_in_date, status]
+required: [unit, name]
+dates:
+  - field: move_in_date
+    max: today
+enums:
+  - field: status
+    allowed: [active, notice, vacant]
+unique:
+  - [unit, name]
+encoding: utf-8-no-bom

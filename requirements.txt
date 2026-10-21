@@ -1,0 +1,7 @@
+# Required: the only dependency of validate.py, map.py, and reconcile.py.
+pyyaml>=6.0
+
+# Optional extras, only for upload_s3.py (boto3) and tests/test_upload_s3.py (moto).
+# Install with:  pip install boto3 "moto[s3]"
+# boto3>=1.34
+# moto[s3]>=5.0

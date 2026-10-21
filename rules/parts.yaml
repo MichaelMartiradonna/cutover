@@ -1,0 +1,12 @@
+# Cutover rules: fictional legacy engineering parts list (PLM-style).
+header: [part_number, revision, description, unit, status, created_on]
+required: [part_number, revision, description]
+dates:
+  - field: created_on
+    max: today
+enums:
+  - field: status
+    allowed: [active, obsolete, hold]
+unique:
+  - [part_number, revision]
+encoding: utf-8-no-bom
