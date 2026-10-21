@@ -1,5 +1,7 @@
 # Cutover
 
+[![tests](https://github.com/MichaelMartiradonna/cutover/actions/workflows/tests.yml/badge.svg)](https://github.com/MichaelMartiradonna/cutover/actions/workflows/tests.yml)
+
 Every system migration has the same weak point: the CSV export from the old system. It arrives with blank keys, dates in two formats, a status value nobody documented, and a duplicate row that someone "fixed" by hand last year. If that file is loaded as-is, the problems become the new system's problems, and nobody can say afterwards which rows were trusted or why. Cutover is a small, fail-closed toolkit for that handoff: it validates the export against rules a human has agreed to, renames and reorders columns into the target layout without touching a single value, checks the result against the source (row count, key set, non-null counts, and field-by-field equality for every mapped column, after both files pass their checksums), optionally uploads it to S3 and verifies what landed, and leaves a run directory with reject logs, reports, and SHA-256 checksums for sign-off. When any stage fails, nothing usable is written. It rejects; it never repairs.
 
 ```text
