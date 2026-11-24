@@ -8,3 +8,5 @@ __pycache__/
 .env.*
 *.pem
 .venv/
+sql/*.db
+sql/results.md
