@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Move_In_Date__c</fullName>
+    <description>Lease move-in date in YYYY-MM-DD format; validated against future dates by No_Future_Move_In_Date.</description>
+    <label>Move-In Date</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <type>Date</type>
+</CustomField>

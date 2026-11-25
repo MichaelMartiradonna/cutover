@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Synthetic AppFolio-style tenant lease records imported from Cutover's validated CSV output.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <label>Tenant Lease</label>
+    <nameField>
+        <displayFormat>TL-{0000}</displayFormat>
+        <label>Lease Record Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Tenant Leases</pluralLabel>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

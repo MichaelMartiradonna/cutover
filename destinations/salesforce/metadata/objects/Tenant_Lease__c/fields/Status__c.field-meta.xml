@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>Lease occupancy status restricted to the three approved Cutover enum values.</description>
+    <label>Status</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>active</fullName>
+                <default>false</default>
+                <label>active</label>
+            </value>
+            <value>
+                <fullName>notice</fullName>
+                <default>false</default>
+                <label>notice</label>
+            </value>
+            <value>
+                <fullName>vacant</fullName>
+                <default>false</default>
+                <label>vacant</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

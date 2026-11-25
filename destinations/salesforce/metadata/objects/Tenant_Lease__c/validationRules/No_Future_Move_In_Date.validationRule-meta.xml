@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Future_Move_In_Date</fullName>
+    <active>true</active>
+    <description>Mirrors Cutover validation rule D002 at the Salesforce destination boundary so future move-in dates are rejected even on manual entry or unvalidated imports.</description>
+    <errorConditionFormula>Move_In_Date__c &gt; TODAY()</errorConditionFormula>
+    <errorDisplayField>Move_In_Date__c</errorDisplayField>
+    <errorMessage>Move-In Date cannot be in the future (Cutover rule D002).</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unit__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Property unit identifier from the reviewed tenant export (e.g., A-101). Configured as a unique External ID to support upsert and prevent duplicate unit imports.</description>
+    <externalId>true</externalId>
+    <label>Unit</label>
+    <length>20</length>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

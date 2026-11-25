@@ -183,6 +183,12 @@ Exit 0 and `Verdict: PASS` in `upload_report.md` (bucket, key, sizes, sidecar, l
 
 Sign-off for a real cutover follows [RUNBOOK.md](RUNBOOK.md): pre-checks, dry run, go/no-go criteria, a sign-off block that records the run directory and checksums, and rollback.
 
+## Companion Extensions
+
+- **SQL validation & reconciliation cross-check:** [sql/README.md](sql/README.md) — 10 SQLite queries matching `validate.py`'s `rejects.csv` record for record (12/12) and diffing raw vs. reviewed files.
+- **AWS EC2 + least-privilege IAM runbook:** [deploy/aws.md](deploy/aws.md) — Amazon Linux 2023 SSH deployment with [deploy/iam-policy.json](deploy/iam-policy.json) scoped to one S3 prefix, verified upload (`Verdict: PASS`), and `AccessDenied` boundary checks.
+- **Salesforce CRM destination example:** [destinations/salesforce/README.md](destinations/salesforce/README.md) — `Tenant_Lease__c` custom object metadata, `No_Future_Move_In_Date` validation rule, 200-row Data Import Wizard load (`0` failed), and reconciled status report/dashboard (`109` active, `47` vacant, `44` notice).
+
 ## What it refuses to do
 
 - Fill a blank, guess a status, reinterpret a date, trim whitespace, or change case. Values pass through byte for byte or the file is rejected.
