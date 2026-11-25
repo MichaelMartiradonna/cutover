@@ -9,7 +9,7 @@ Standard Salesforce Metadata API definitions live under [metadata/objects/Tenant
 | Field API Name | Label | Type | Constraints | Cutover Rule Mirrored |
 |---|---|---|---|---|
 | `Name` | Lease Record Number | Auto Number (`TL-{0000}`) | System-generated primary key | — |
-| `Unit__c` | Unit | Text (20) | Required, **Unique (case-insensitive)**, **External ID** | `R001` (required), `U001` (unique) |
+| `Unit__c` | Unit | Text (20) | Required, **Unique (case-insensitive)**, **External ID** | `R001` (required), `U001` (stricter: U001 flags a repeated unit + name pair; Salesforce rejects any repeated unit) |
 | `Tenant_Name__c` | Tenant Name | Text (120) | Required | `R001` (required) |
 | `Move_In_Date__c` | Move-In Date | Date | Required | `R001`, `D001` (valid date) |
 | `Status__c` | Status | Picklist | Required, **Restricted** (`active`, `notice`, `vacant`) | `E001` (allowed enum values) |
